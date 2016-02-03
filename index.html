@@ -1,35 +1,142 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kai's Image Gallery</title>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Kai's Photo Auction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/jquery.modal.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 
-    <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Kai's Image Gallery</h1>
-        <p>Click a thumbnail to view the full-size image!</p>
-      </header>
 
-      <div id  = "gallery" > 
+</head>
+<body>
 
-        <img src = "../images/thumbnails/64512131.jpg">
+  <!-- Modals; Edit with care -->
+  <div id="img1" style="display:none;">
+    <p>Hand-crafted Baboon: $5</p>
+    <img src="images/large/baboon.jpg">
+  </div>
+  <div id="img2" style="display:none;">
+    <p>Beats In-Ear Bluetooth Headphones: $200 </p>
+    <img src="images/large/beats.jpg">
+  </div>
+  <div id="img3" style="display:none;">
+    <p>Bose Soundlink Mini Speaker: $200</p>
+    <img src="images/large/bose.jpg">
+  </div>
+  <div id="img4" style="display:none;">
+    <p>Brita Water Bottle w/Filter: $20</p>
+    <img src="images/large/bottle.jpg">
+  </div>
+  <div id="img5" style="display:none;">
+    <p>TI Calculator: $10</p>
+    <img src="images/large/calculator.jpg">
+  </div>
+  <div id="img6" style="display:none;">
+    <p>Fiio E10K DAC: $70</p>
+    <img src="images/large/DAC.jpg">
+  </div>
+  <div id="img7" style="display:none;">
+    <p>GoPro Hero4 Silver: $400</p>
+    <img src="images/large/gopro.jpg">
+  </div>
+  <div id="img8" style="display:none;">
+    <p>HTC One M7: $200</p>
+    <img src="images/large/htc.jpg">
+  </div>
+  <div id="img9" style="display:none;">
+    <p>BMW Key: $5</p>
+    <img src="images/large/key.jpg">
+  </div>
+  <div id="img10" style="display:none;">
+    <p>Apple Bluetooth Keyboard: $40</p>
+    <img src="images/large/keyboard.jpg">
+  </div>
+  <div id="img11" style="display:none;">
+    <p>Salt Lamp: $10 </p>
+    <img src="images/large/lamp.jpg">
+  </div>
+  <div id="img12" style="display:none;">
+    <p>Apple Retina MacBook: $1000</p>
+    <img src="images/large/macbook.jpg">
+  </div>
+  <div id="img13" style="display:none;">
+    <p>Logitech MX Master Mouse: $100</p>
+    <img src="images/large/mouse.jpg">
+  </div>
+  <div id="img14" style="display:none;">
+    <p> WD Passport 1TB Hard Drive: $40 </p>
+    <img src="images/large/passport.jpg">
+  </div>
+  <div id="img15" style="display:none;">
+    <p>Super fancy mechanical pencil: $30</p>
+    <img src="images/large/pencil.jpg">
+  </div>
+  <div id="img16" style="display:none;">
+    <p>Smarties Tube (50 count): $20</p>
+    <img src="images/large/smarties.jpg">
+  </div>
+  <div id="img17" style="display:none;">
+    <p>Stapler: $5</p>
+    <img src="images/large/stapler.jpg">
+  </div>
+  <div id="img18" style="display:none;">
+    <p>Apple Bluetooth Trackpad: $40</p>
+    <img src="images/large/trackpad.jpg">
+  </div>
+  <div id="img19" style="display:none;">
+    <p>Tylenol: $5</p>
+    <img src="images/large/tylenol.jpg">
+  </div>
+  <div id="img20" style="display:none;">
+    <p>Wallet: $50</p>
+    <img src="images/large/wallet.jpg">
+  </div>
 
-      </div>
-      
-   
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/kaimbanks">kaimbanks</a></p>
-      </footer>
+  <!-- Page content -->
+  <div class="container">
 
-    </div>
-    
-  </body>
+    <section class="page-header">
+      <h1 class="project-name">Kai's Image Auction</h1>
+      <h2 class="project-tagline">Click on a thumbnail to see an item's price and a larger image!</h2>
+      <a class="mailto" href="mailto:kai.banks@wustl.edu" id = "mailButton">Email Me to Order an Item!</a> 
+    </section>
+
+    <section class="gallery">
+      <ul class="PersonalImageGallery">
+        <li><a href="#img1" rel="modal:open"><img src="images/thumbnails/baboon.jpg"></a></li>
+        <li><a href="#img2" rel="modal:open"><img src="images/thumbnails/beats.jpg"></a></li>
+        <li><a href="#img3" rel="modal:open"><img src="images/thumbnails/bose.jpg"></a></li>
+        <li><a href="#img4" rel="modal:open"><img src="images/thumbnails/bottle.jpg"></a></li>
+        <li><a href="#img5" rel="modal:open"><img src="images/thumbnails/calculator.jpg"></a></li>
+        <li><a href="#img6" rel="modal:open"><img src="images/thumbnails/DAC.jpg"></a></li>
+        <li><a href="#img7" rel="modal:open"><img src="images/thumbnails/gopro.jpg"></a></li>
+        <li><a href="#img8" rel="modal:open"><img src="images/thumbnails/htc.jpg"></a></li>
+        <li><a href="#img9" rel="modal:open"><img src="images/thumbnails/key.jpg"></a></li>
+        <li><a href="#img10" rel="modal:open"><img src="images/thumbnails/keyboard.jpg"></a></li>
+        <li><a href="#img11" rel="modal:open"><img src="images/thumbnails/lamp.jpg"></a></li>
+        <li><a href="#img12" rel="modal:open"><img src="images/thumbnails/macbook.jpg"></a></li>
+        <li><a href="#img13" rel="modal:open"><img src="images/thumbnails/mouse.jpg"></a></li>
+        <li><a href="#img14" rel="modal:open"><img src="images/thumbnails/passport.jpg"></a></li>
+        <li><a href="#img15" rel="modal:open"><img src="images/thumbnails/pencil.jpg"></a></li>
+        <li><a href="#img15" rel="modal:open"><img src="images/thumbnails/smarties.jpg"></a></li>
+        <li><a href="#img15" rel="modal:open"><img src="images/thumbnails/stapler.jpg"></a></li>
+        <li><a href="#img15" rel="modal:open"><img src="images/thumbnails/trackpad.jpg"></a></li>
+        <li><a href="#img15" rel="modal:open"><img src="images/thumbnails/tylenol.jpg"></a></li>
+        <li><a href="#img15" rel="modal:open"><img src="images/thumbnails/wallet.jpg"></a></li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <hr>
+      <p> <a href="#top" id = "topButton">Back to Top</a></p>
+      <p>All photos taken by site creator, Kai Banks.</p>
+    </footer>
+    <!-- JavaScript; Do not edit below -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
+  </div>
+</body>
 </html>
